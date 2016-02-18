@@ -48,5 +48,5 @@ function lunchDay() {
     var d = new Date();
     var n = d.getDate();
     var w = d.getDay();
-    document.getElementById('demo').innerHTML = lunch[n];
+    document.getElementById('demo').innerHTML = lunch[n] + weekday[w];
 }
