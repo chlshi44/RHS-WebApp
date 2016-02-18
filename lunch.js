@@ -33,9 +33,20 @@ var lunch = {
 31: "FoodL"
 };
 
+var weekday = {
+  0: "Sunday",
+  1: "Monday",
+  2: "Tuesday",
+  3: "Wednesday",
+  4: "Thursday",
+  5: "Friday",
+  6: "Saturday",
+};
+
 //Based on the reported day of the clients computer, the food in the array will be displayed.//
 function lunchDay() {
     var d = new Date();
     var n = d.getDate();
+    var w = d.getDay();
     document.getElementById('demo').innerHTML = lunch[n];
 }
