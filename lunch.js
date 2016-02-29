@@ -84,7 +84,7 @@ function bellSchedule() {
     		document.getElementById('showSchedule2').innerHTML = bSchedule[n1+1];
     }
     else {
-    		document.getElementById('showSchedule2').innerHTML = bSchedule2[n1-nextMonth+1];
+    		document.getElementById('showSchedule2').innerHTML = bSchedule2[1];
     }
 }
 
