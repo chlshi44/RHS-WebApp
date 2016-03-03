@@ -1,6 +1,6 @@
 var DaysInMonth = {
-		0: 31,
-    1: 29,
+        0: 31,
+    1: 28,
     2: 31,
     3: 30,
     4: 31,
@@ -16,8 +16,8 @@ var DaysInMonth = {
 var bSchedule = {
 1: "Normal day",
 2: "Normal day",
-3: "Normal day",
-4: "Normal day",
+3: "3Normal day",
+4: "Abnormal day",
 5: "Normal day",
 6: "Normal day",
 7: "Normal day",
@@ -39,14 +39,10 @@ var bSchedule = {
 23: "Normal day",
 24: "Normal day",
 25: "Advisory. Double assembly schedule.",
-26: "Normal day",
-27: "Normal day",
-28: "Normal day",
-29: "Advisory. Double assembly schedule.",
 };
 
 var bSchedule2 = {
-1: "Normal day",
+1: "AbNormal day",
 2: "Normal day",
 3: "Normal day",
 4: "Normal day",
@@ -80,11 +76,11 @@ function bellSchedule() {
     var m1 = d1.getMonth();
     var nextMonth = m1 + 1;
     document.getElementById('showSchedule').innerHTML = bSchedule[n1];
-    if (n1 > DaysInMonth[m1]) {
-    		document.getElementById('showSchedule2').innerHTML = bSchedule[n1+1];
+    if (n1 < DaysInMonth[m1]) {
+            document.getElementById('showSchedule2').innerHTML = bSchedule[n1+1];
     }
     else {
-    		document.getElementById('showSchedule2').innerHTML = bSchedule2[1];
+            document.getElementById('showSchedule2').innerHTML = bSchedule2[n1-nextMonth+1];
     }
 }
 
